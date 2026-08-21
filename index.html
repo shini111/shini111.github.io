@@ -26,8 +26,11 @@
     <h1 class="hero-name">Gameplay Programmer</h1>
     <p class="hero-role">I build the systems underneath the game: engines, physics, multiplayer state, the stuff that has to hold up when everything else is moving. Currently finishing an MSc in Digital Games Development.</p>
     <div class="hero-links">
-      <a href="mailto:xavierlopes.work@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/xavierlopes-4759a0327" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="email-group">
+        <a href="mailto:xavierlopes.work@gmail.com">Email</a>
+        <button type="button" class="copy-btn" data-copy="xavierlopes.work@gmail.com" aria-label="Copy email address to clipboard">Copy</button>
+      </span>
+      <a href="https://www.linkedin.com/in/xavier-lopes-4759a0327/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/shini111" target="_blank" rel="noopener">GitHub</a>
       <a href="https://shini111.itch.io" target="_blank" rel="noopener">itch.io</a>
     </div>
@@ -118,7 +121,7 @@
 
   <section class="block" id="contact">
     <h2 class="section-title">Contact</h2>
-    <p class="lead">Based in Portugal, open to remote and relocation. Reach out directly at <a href="mailto:xavierlopes.work@gmail.com">xavierlopes.work@gmail.com</a>.</p>
+    <p class="lead">Based in Portugal, open to remote and relocation. Reach out directly at <a href="mailto:xavierlopes.work@gmail.com">xavierlopes.work@gmail.com</a> <button type="button" class="copy-btn" data-copy="xavierlopes.work@gmail.com" aria-label="Copy email address to clipboard">Copy</button>.</p>
   </section>
 
 </div>
@@ -126,6 +129,36 @@
 <footer class="site">
   <div class="wrap"><p>Built by Xavier Lopes. Last updated 2026.</p></div>
 </footer>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    var defaultLabel = btn.textContent;
+    btn.addEventListener('click', function () {
+      var email = btn.getAttribute('data-copy');
+      var done = function () {
+        btn.textContent = 'Copied!';
+        btn.classList.add('is-copied');
+        setTimeout(function () {
+          btn.textContent = defaultLabel;
+          btn.classList.remove('is-copied');
+        }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(done, done);
+      } else {
+        var tmp = document.createElement('textarea');
+        tmp.value = email;
+        tmp.style.position = 'fixed';
+        tmp.style.opacity = '0';
+        document.body.appendChild(tmp);
+        tmp.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(tmp);
+        done();
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

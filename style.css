@@ -87,9 +87,22 @@ h1.hero-name {
   font-weight: 600; margin: 0 0 6px; letter-spacing: -0.01em;
 }
 .hero-role { font-size: 19px; color: var(--text-dim); margin: 0 0 22px; max-width: 60ch; }
-.hero-links { display: flex; flex-wrap: wrap; gap: 10px 18px; font-family: var(--font-display); font-size: 13px; }
+.hero-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; font-family: var(--font-display); font-size: 13px; }
 .hero-links a { color: var(--text-dim); border-bottom: 1px dashed var(--border-bright); padding-bottom: 1px; }
 .hero-links a:hover { color: var(--cyan); border-color: var(--cyan); text-decoration: none; }
+.email-group { display: inline-flex; align-items: center; gap: 8px; }
+
+/* ---------- Copy-to-clipboard button ---------- */
+.copy-btn {
+  font-family: var(--font-display); font-size: 11px; letter-spacing: 0.03em;
+  color: var(--text-faint); background: transparent;
+  border: 1px solid var(--border-bright); border-radius: var(--radius);
+  padding: 2px 8px; cursor: pointer; line-height: 1.6;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.copy-btn:hover { color: var(--cyan); border-color: var(--cyan); }
+.copy-btn.is-copied { color: var(--bg); background: var(--cyan); border-color: var(--cyan); }
+p.lead .copy-btn { margin-left: 2px; vertical-align: middle; }
 
 /* ---------- Stat readout ---------- */
 .readout {
