@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novel Scraper — Xavier Lopes</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="../index.html" style="color:inherit;">XAVIER<span>.</span>LOPES</a></div>
+    <nav class="site"><a href="../index.html#projects">All Projects</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="proj-header">
+    <a href="../index.html" class="back-link">&larr; Back to projects</a>
+    <p class="eyebrow">Tools · Personal Project</p>
+    <h1>Novel Scraper</h1>
+    <div class="status-line">Released · Chrome Extension</div>
+    <p style="color:var(--text-dim); max-width:65ch; font-size:17px;">A Chrome extension (Manifest V3) that extracts clean text content from web pages, using adaptive DOM parsing with multiple fallback detection strategies instead of relying on site-specific rules.</p>
+    <div class="tags">
+      <span class="tag">JavaScript</span>
+      <span class="tag">Chrome Extension</span>
+      <span class="tag">Web Scraping</span>
+    </div>
+    <div class="proj-links">
+      <a href="https://github.com/shini111/novel-scraper-extension" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+    </div>
+  </div>
+
+  <div class="media-row single">
+    <div class="media-slot"><div class="placeholder">Screenshot coming soon</div></div>
+  </div>
+
+  <div class="proj-body">
+    <h2>The Build</h2>
+    <p>Built to feed the translation pipeline with clean source text: rather than hard-coding selectors for specific sites, the extension layers several DOM-parsing strategies and falls back through them until one produces a confident result, so it keeps working as pages change or new sites get thrown at it. A regex-based cleanup pass strips boilerplate and normalizes the extracted text across multiple languages before it's handed off.</p>
+
+    <h2>What I Did</h2>
+    <ul>
+      <li>Designed and built the adaptive, fallback-based DOM parsing approach from scratch</li>
+      <li>Built the Manifest V3 extension end to end, including the multi-language cleanup pass</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap"><p><a href="../index.html">&larr; Xavier Lopes</a></p></div>
+</footer>
+
+<script src="../lightbox.js"></script>
+
+</body>
+</html>

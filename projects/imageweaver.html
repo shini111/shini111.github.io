@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImageWeaver — Xavier Lopes</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="../index.html" style="color:inherit;">XAVIER<span>.</span>LOPES</a></div>
+    <nav class="site"><a href="../index.html#projects">All Projects</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="proj-header">
+    <a href="../index.html" class="back-link">&larr; Back to projects</a>
+    <p class="eyebrow">Tools &amp; AI · Personal Project</p>
+    <h1>ImageWeaver</h1>
+    <div class="status-line">Released · Open Source</div>
+    <p style="color:var(--text-dim); max-width:65ch; font-size:17px;">An AI-powered tool that automatically restores images to their correct position in machine-translated documents, using LLM-based context analysis to decide where each one belongs.</p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">LLM Integration</span>
+      <span class="tag">Automation</span>
+    </div>
+    <div class="proj-links">
+      <a href="https://github.com/shini111/ImageWeaver" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+    </div>
+  </div>
+
+  <div class="media-row single">
+    <div class="media-slot"><img src="images/imageweaver-app.png" alt="ImageWeaver desktop app, showing folder selection and file matching preview" loading="lazy" style="object-fit:contain; background:var(--bg-raised-2);"></div>
+  </div>
+
+  <div class="proj-body">
+    <h2>The Build</h2>
+    <p>A companion tool for the translation pipeline: when a document gets machine-translated, its images often end up detached from the paragraphs they originally illustrated. ImageWeaver re-matches each image back to its correct spot by having an LLM read the surrounding context on both sides of the translation and score where the image most plausibly belongs, instead of relying on fixed rules or matching by position alone. It scores context quality by length, diversity, and dialogue/action indicators, and adapts how many paragraphs of context it pulls in based on the document's structure.</p>
+    <p>Wrapped in a desktop GUI with dedicated folder selection, LLM configuration, and a file-matching preview step, so the placement can be reviewed before anything is written back out.</p>
+
+    <h2>What I Did</h2>
+    <ul>
+      <li>Designed and built the context-scoring logic that drives image placement decisions</li>
+      <li>Built the desktop GUI, including the scan-and-preview step for reviewing matches before processing</li>
+      <li>Built as a practical extension of the translation tooling: proof that the same LLM-orchestration skill applies outside the games space</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap"><p><a href="../index.html">&larr; Xavier Lopes</a></p></div>
+</footer>
+
+<script src="../lightbox.js"></script>
+
+</body>
+</html>
